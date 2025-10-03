@@ -10,12 +10,12 @@ export default defineConfig({
     port: 3000,
   },
   plugins: [
-    netlify(),
     devtools(),
     tsConfigPaths({
       projects: ['./tsconfig.json'],
     }),
     tanstackStart(),
+    netlify(),
     viteReact(),
   ],
 })
