@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7bb110df-61ec-4187-b897-63f78cd69526/deploy-status)](https://app.netlify.com/projects/tss-devtools-issue/deploys)
+
 # Welcome to TanStack.com!
 
 This site is built with TanStack Router!
