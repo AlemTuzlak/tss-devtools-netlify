@@ -19,21 +19,6 @@ export default defineConfig({
     netlify(),
     // nitro(),
     viteReact(),
-    {
-      name: "@tanstack/devtools:remove-devtools-on-build",
-      apply(config, { command }) {
-        console.log("removeDevtoolsOnBuild:", Boolean(command !== "serve" || config.mode === "production"));
-        return (command !== "serve" || config.mode === "production");
-      },
-      enforce: "pre",
-      transform(code, id) {
-        console.log("Transform called with id:", id);
-        if (id.includes("node_modules") || id.includes("?raw") || id.includes("dist") || id.includes("build"))
-          return;
 
-        console.log("Transforming:", id);
-
-      }
-    },
   ],
 });
