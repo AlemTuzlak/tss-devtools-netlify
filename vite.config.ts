@@ -1,9 +1,10 @@
-import { tanstackStart } from '@tanstack/react-start/plugin/vite'
-import { defineConfig } from 'vite'
-import tsConfigPaths from 'vite-tsconfig-paths'
-import viteReact from '@vitejs/plugin-react'
-import netlify from '@netlify/vite-plugin-tanstack-start'
-import { devtools } from '@tanstack/devtools-vite'
+import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { defineConfig } from "vite";
+import tsConfigPaths from "vite-tsconfig-paths";
+import viteReact from "@vitejs/plugin-react";
+import netlify from "@netlify/vite-plugin-tanstack-start";
+import { devtools } from "@tanstack/devtools-vite";
+// import { nitro } from "nitro/vite";
 
 export default defineConfig({
   server: {
@@ -12,10 +13,11 @@ export default defineConfig({
   plugins: [
     devtools(),
     tsConfigPaths({
-      projects: ['./tsconfig.json'],
+      projects: ["./tsconfig.json"],
     }),
     tanstackStart(),
     netlify(),
+    // nitro(),
     viteReact(),
   ],
-})
+});
