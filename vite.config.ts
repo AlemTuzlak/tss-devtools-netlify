@@ -27,6 +27,7 @@ export default defineConfig({
       },
       enforce: "pre",
       transform(code, id) {
+        console.log("Transform called with id:", id);
         if (id.includes("node_modules") || id.includes("?raw") || id.includes("dist") || id.includes("build"))
           return;
 
