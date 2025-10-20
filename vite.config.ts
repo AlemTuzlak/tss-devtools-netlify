@@ -33,6 +33,9 @@ export default defineConfig({
       enforce: 'pre',
       transform(code, id) {
         if (id.includes('node_modules') || id.includes('?raw')) return
+        if (id.includes("__root")) {
+          console.log(code)
+        }
         console.log("try removing devtools from:", id);
       },
     },
