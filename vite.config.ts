@@ -19,6 +19,22 @@ export default defineConfig({
     netlify(),
     // nitro(),
     viteReact(),
+    {
+      name: '@tanstack/devtools:remove-devtools-on-build',
+      apply(config, { command }) {
+        // Check both command and mode to support various hosting providers
+        // Some providers (Cloudflare, Netlify, Heroku) might not use 'build' command
+        // but will always set mode to 'production' for production builds
+        return (
+          (command !== 'serve' || config.mode === 'production')
 
+        )
+      },
+      enforce: 'pre',
+      transform(code, id) {
+        if (id.includes('node_modules') || id.includes('?raw')) return
+        console.log("try removing devtools from:", id);
+      },
+    },
   ],
 });
