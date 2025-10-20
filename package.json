@@ -21,8 +21,8 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@tanstack/devtools-vite": "https://pkg.pr.new/TanStack/devtools/@tanstack/devtools-vite@2dce88f",
-    "@tanstack/react-devtools": "https://pkg.pr.new/TanStack/devtools/@tanstack/react-devtools@2dce88f",
+    "@tanstack/devtools-vite": "https://pkg.pr.new/TanStack/devtools/@tanstack/devtools-vite@df24016",
+    "@tanstack/react-devtools": "https://pkg.pr.new/TanStack/devtools/@tanstack/react-devtools@df24016",
     "@tanstack/react-query-devtools": "^5.90.2",
     "@tanstack/react-router-devtools": "^1.133.15",
     "@types/node": "^22.18.11",
